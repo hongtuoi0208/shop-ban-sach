@@ -47,7 +47,12 @@ Các tệp PHP
 | order_item       | 60                  |
 | wishlist_item    | 30                  |
 
+# Sơ đồ liên quan
+
+![use-cases](https://github.com/user-attachments/assets/7f115c60-f294-479f-b130-1301c48d37f4)
+
+# Sơ đồ class diagram
+
+![class-diagram](https://github.com/user-attachments/assets/2ad9fc27-e928-4fbf-ad64-e7a2e54d8a04)
 
 
-
- 
