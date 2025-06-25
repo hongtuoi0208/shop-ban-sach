@@ -1,6 +1,5 @@
-![stock-vector-bookstore-interior-book-store-shop-with-readers-buyers-inside-people-customers-choosing-buying-2559522479](https://github.com/user-attachments/assets/2347b392-3c13-4c14-ab68-a3e824bba850)
+![image](https://github.com/user-attachments/assets/ca95a7bf-e1c7-46c4-8e62-283d6dca241c)
 
-![MyProject Banner](https://github.com/ca-xao-xa-ot/BookStore/blob/main/public/assets/images/myproject.jpeg?raw=true)
 <h1>About me </h1>
 <ul>
     <a href = '' ><li>Bùi Thị Hồng Tươi </li></a>
