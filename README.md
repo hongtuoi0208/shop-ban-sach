@@ -137,7 +137,8 @@ classDiagram
 
 https://github.com/hongtuoi0208/shop-ban-sach
 
-# Module:
+# Module
+
 <a href = '' ><li>Auth.Book.Controller </li></a>
 
 <?php
