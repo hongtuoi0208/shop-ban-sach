@@ -37,10 +37,6 @@ js: Chứa các tệp JavaScript để thêm tính năng tương tác.
 uploaded_img: Chứa các hình ảnh sản phẩm được tải lên.
 Các tệp PHP
 
-# Sơ đồ class diagram
-
-![class-diagram](https://github.com/user-attachments/assets/2ad9fc27-e928-4fbf-ad64-e7a2e54d8a04)
-
 # Cơ sở dữ liệu
 
 ![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12) 
