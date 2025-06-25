@@ -1,3 +1,5 @@
+![stock-vector-bookstore-interior-book-store-shop-with-readers-buyers-inside-people-customers-choosing-buying-2559522479](https://github.com/user-attachments/assets/2347b392-3c13-4c14-ab68-a3e824bba850)
+
 ![MyProject Banner](https://github.com/ca-xao-xa-ot/BookStore/blob/main/public/assets/images/myproject.jpeg?raw=true)
 <h1>About me </h1>
 <ul>
