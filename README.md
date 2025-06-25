@@ -138,8 +138,7 @@ classDiagram
 https://github.com/hongtuoi0208/shop-ban-sach
 
 # Module:
-
-# Controllers (Auth.BookController.php)##
+<a href = '' ><li>Auth.Book.Controller </li></a>
 
 <?php
 
@@ -228,8 +227,8 @@ class BooksController extends Controller
     }
 }
 
+<a href = '' ><li> Controllers (Admin.BookController.php) </li></a>
 
--**Controllers (Admin.BookController.php)**
 return view('admin.pages.books.edit', compact('book', 'categories'));
     }
     
@@ -298,6 +297,7 @@ return view('admin.pages.books.edit', compact('book', 'categories'));
 
 
 <a href = '' ><li> Database (Migrations) </li></a>
+
  <?php
 
 use Illuminate\Database\Migrations\Migration;
