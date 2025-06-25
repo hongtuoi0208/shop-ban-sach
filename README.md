@@ -1,8 +1,9 @@
 ![MyProject Banner](https://github.com/ca-xao-xa-ot/BookStore/blob/main/public/assets/images/myproject.jpeg?raw=true)
 <h1>About me </h1>
 <ul>
-    <a href = '' ><li>Bùi Thị Hồng Tươi - 23015124</li></a>
-    
+    <a href = '' ><li>Bùi Thị Hồng Tươi </li></a>
+    <a href = '' ><li>Mã số sinh viên: 23015124</li></a>
+    <a href = '' ><li>Thiết kế web nâng cao-1-3-24.TH3</li></a>
 </ul>
 <p>I'm from PHENIKAA UNIVERSITY</p>
 
