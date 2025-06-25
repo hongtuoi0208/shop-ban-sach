@@ -129,6 +129,13 @@ classDiagram
 
 ![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
 
+## Link Readme (.io)
+
+https://hongtuoi0208.github.io/shop-ban-sach/
+
+## Link Repo
+
+https://github.com/hongtuoi0208/shop-ban-sach
 
 
 
