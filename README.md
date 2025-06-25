@@ -1,4 +1,4 @@
-![002cfd59-f8e5-4e8b-abdb-b1af9a4bfd97](https://github.com/user-attachments/assets/df34a8ba-2066-41ad-bc89-b1fd8fd4b196)# Sinh viên thực hiện
+# Sinh viên thực hiện
 - **Họ và tên :** Bùi Thị Hồng Tươi
 - **Mã số sinh viên :** 23015124
 - **Lớp:** Thiết kế web nâng cao-1-3-24(TH3)
@@ -55,3 +55,6 @@ Các tệp PHP
 
 ![class-diagram](https://github.com/user-attachments/assets/2ad9fc27-e928-4fbf-ad64-e7a2e54d8a04)
 
+# Sơ đồ lớp UML
+
+![002cfd59-f8e5-4e8b-abdb-b1af9a4bfd97](https://github.com/user-attachments/assets/df34a8ba-2066-41ad-bc89-b1fd8fd4b196)
