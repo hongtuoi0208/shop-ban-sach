@@ -64,7 +64,7 @@ Các tệp PHP
 
 ![class-diagram](https://github.com/user-attachments/assets/2ad9fc27-e928-4fbf-ad64-e7a2e54d8a04)
 
-# Sơ đồ lớp UML
+# Sơ đồ UML
 
 ![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12)
 
@@ -95,7 +95,7 @@ C -->|Hủy| F[Không làm gì cả]
 
 
 ```
-## Class Diagram (Phiên bản rút gọn)
+## Class Diagram 
 ```mermaid
 classDiagram
     class User {
@@ -152,7 +152,10 @@ classDiagram
     Book "*" --> "1" Category
     Order "*" --> "*" Book : contains
 ```
+## Sơ đồ thuật toán
 
+![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
+ 
 
 
 
@@ -206,7 +209,10 @@ classDiagram
 
 ![deepseek_mermaid_20250625_34294a](https://github.com/user-attachments/assets/18fa2c2f-c944-4199-9b2e-d637838d487e)
 
-# Database
+# Sơ đồ thuật toán
+![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/3f2edb23-a91d-4122-b1c3-a740e768fa23)
+
+
 
 
 
