@@ -185,10 +185,13 @@ classDiagram
 
 
 
+![image](https://github.com/user-attachments/assets/a6fb7a36-40ee-48cc-b5f3-f127d72741a4)
 
-# Họ và tên: Đinh Nhật Tân
-# Mã số sinh viên : 23013018
-# Lớp: Thiết kế web nâng cao-1-3-24-TH4
+<ul>
+    <a href = '' ><li>Đinh Nhật Tân </li></a>
+    <a href = '' ><li>Mã số sinh viên: 23013018</li></a>
+    <a href = '' ><li>Thiết kế web nâng cao-1-3-24.TH4</li></a>
+</ul>
 
 # Tên dự án : Shop đồ chơi
 
