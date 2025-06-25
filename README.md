@@ -41,10 +41,10 @@ Các tệp PHP
 
 ![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12) 
  
-## Sơ đồ chức năng (Use case diagram):
+# Sơ đồ chức năng (Use case diagram):
 ![deepseek_mermaid_20250625_4990d2](https://github.com/user-attachments/assets/659d0057-974b-4137-9182-bec7d90bb13d)
 
-## Activity Diagram (Ví dụ: Đặt hàng - Place Order):
+# Activity Diagram (Ví dụ: Đặt hàng - Place Order):
 ```mermaid
 flowchart TD
     A[User] -->|Chon sach| B[Them vao gio hang]
@@ -56,7 +56,7 @@ flowchart TD
     G --> H[Hien thi thong bao thanh cong]
 
 ```
-## Activity Diagram (Ví dụ: Xoá sách - Admin)
+# Activity Diagram (Ví dụ: Xoá sách - Admin)
 ```mermaid
 flowchart TD
 A[Admin] --> B[Click nút 'Xóa' sách]
@@ -67,7 +67,7 @@ C -->|Hủy| F[Không làm gì cả]
 
 
 ```
-## Class Diagram 
+# Class Diagram 
 ```mermaid
 classDiagram
     class User {
@@ -125,146 +125,228 @@ classDiagram
     Order "*" --> "*" Book : contains
 ```
 
-## Sơ đồ thuật toán
+# Sơ đồ thuật toán
 
 ![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
 
-## Link Readme (.io)
+# Link Readme (.io)
 
 
 
-## Link Repo
+# Link Repo
 
 https://github.com/hongtuoi0208/shop-ban-sach
 
-## Module:
+# Module:
 
--**Composer**
+## Database (Migrations):
+<?php
 
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
 {
-    "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
-    "license": "MIT",
-    "require": {
-        "php": "^8.2",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
-    },
-    "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.41",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.3"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi",
-            "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
-        ],
-        "dev": [
-            "Composer\\Config::disableProcessTimeout",
-            "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
-        ]
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "12.x-dev"
-        },
-        "laravel": {
-            "dont-discover": []
-        }
-    },
-    "config": {
-        "optimize-autoloader": true,
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true
-        }
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
-}
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('avatar')->nullable();
+            $table->string('email')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('password');
+            $table->rememberToken();
+            $table->timestamps();
+        });
+
+        Schema::create('password_reset_tokens', function (Blueprint $table) {
+            $table->string('email')->primary();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
+        });
+
+        Schema::create('sessions', function (Blueprint $table) {
+            $table->string('id')->primary();
+            $table->foreignId('user_id')->nullable()->index();
+            $table->string('ip_address', 45)->nullable();
+            $table->text('user_agent')->nullable();
+            $table->longText('payload');
+            $table->integer('last_activity')->index();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('password_reset_tokens');
+        Schema::dropIfExists('sessions');
+    }
+};
 
 
--**Database**:
+
+**## Controllers (Auth.BookController.php)**
 
 <?php
 
-namespace Database\Factories;
+namespace App\Http\Controllers;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Facades\Hash;
-use Illuminate\Support\Str;
+use App\Models\Book;
+use App\Models\Category;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\User>
- */
-class UserFactory extends Factory
+class BooksController extends Controller
 {
-    /**
-     * The current password being used by the factory.
-     */
-    protected static ?string $password;
-
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
-    public function definition(): array
+    public function index(Request $request)
     {
-        return [
-            'name' => fake()->name(),
-            'email' => fake()->unique()->safeEmail(),
-            'email_verified_at' => now(),
-            'password' => static::$password ??= Hash::make('password'),
-            'remember_token' => Str::random(10),
-        ];
+        $query = Book::with('category');
+        
+        // Lọc theo danh mục
+        if ($request->has('category')) {
+            $category = Category::where('slug', $request->category)->first();
+            if ($category) {
+                $query->where('category_id', $category->id);
+            }
+        }
+        
+        // Lọc sách bán chạy
+        if ($request->has('is_bestseller')) {
+            $query->where('is_bestseller', true);
+        }
+        
+        // Lọc sách mới
+        if ($request->has('newest')) {
+            $query->latest();
+        }
+        
+        // Tìm kiếm
+        if ($request->has('search') && $request->search) {
+            $search = $request->search;
+            $query->where(function($q) use ($search) {
+                $q->where('title', 'like', "%{$search}%")
+                  ->orWhere('description', 'like', "%{$search}%");
+            });
+        }
+        
+        // Phân trang kết quả
+        $books = $query->paginate(12);
+        
+        // Đánh dấu sách đã yêu thích nếu người dùng đã đăng nhập
+        if (Auth::check()) {
+            $favoriteBookIds = Auth::user()->favorites()->pluck('book_id')->toArray();
+            
+            foreach ($books as $book) {
+                $book->is_favorited = in_array($book->id, $favoriteBookIds);
+            }
+        }
+        
+        // Lấy tất cả danh mục
+        $categories = Category::withCount('books')->get();
+        
+        return view('client.pages.books.index', compact('books', 'categories'));
     }
-
-    /**
-     * Indicate that the model's email address should be unverified.
-     */
-    public function unverified(): static
+    
+    public function show($slug)
     {
-        return $this->state(fn (array $attributes) => [
-            'email_verified_at' => null,
-        ]);
+        $book = Book::where('slug', $slug)->firstOrFail();
+        
+        // Đánh dấu nếu sách đã được yêu thích
+        if (Auth::check()) {
+            $book->is_favorited = Auth::user()->favorites()->where('book_id', $book->id)->exists();
+        }
+        
+        $relatedBooks = Book::where('category_id', $book->category_id)
+                           ->where('id', '!=', $book->id)
+                           ->take(4)
+                           ->get();
+        
+        // Đánh dấu sách liên quan đã yêu thích
+        if (Auth::check()) {
+            $favoriteBookIds = Auth::user()->favorites()->pluck('book_id')->toArray();
+            
+            foreach ($relatedBooks as $relatedBook) {
+                $relatedBook->is_favorited = in_array($relatedBook->id, $favoriteBookIds);
+            }
+        }
+        
+        return view('client.pages.books.show', compact('book', 'relatedBooks'));
     }
 }
+-**Controllers (Admin.BookController.php)**
+return view('admin.pages.books.edit', compact('book', 'categories'));
+    }
+    
+    public function update(Request $request, Book $book)
+    {
+        $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'cover_image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+            'price' => 'required|numeric|min:0',
+            'stock' => 'required|integer|min:0',
+            'category_id' => 'required|exists:categories,id',
+        ], [
+            'title.required' => 'Tên sách là bắt buộc.',
+            'title.max' => 'Tên sách không được vượt quá 255 ký tự.',
+            'description.required' => 'Mô tả sách là bắt buộc.',
+            'cover_image.required' => 'Ảnh bìa là bắt buộc.',
+            'cover_image.image' => 'Ảnh bìa phải là một hình ảnh.',
+            'cover_image.mimes' => 'Ảnh bìa phải có định dạng jpeg, png, jpg hoặc gif.',
 
--**controler**: 
+            'price.required' => 'Giá sách là bắt buộc.',
+            'price.numeric' => 'Giá sách phải là một số.',
+            'price.min' => 'Giá sách phải lớn hơn hoặc bằng 0.',
+            'stock.required' => 'Số lượng tồn kho là bắt buộc.',
+            'stock.integer' => 'Số lượng tồn kho phải là một số nguyên.',
+            'stock.min' => 'Số lượng tồn kho phải lớn hơn hoặc bằng 0.',
+            'category_id.required' => 'Vui lòng chọn một danh mục cho sách.',
+            'category_id.exists' => 'Danh mục đã chọn không hợp lệ.',
+        ]);
+        
+        $data = [
+            'title' => $request->title,
+            'slug' => Str::slug($request->title) . '-' . Str::random(5),
+            'description' => $request->description,
+            'price' => $request->price,
+            'stock' => $request->stock,
+            'is_bestseller' => $request->has('is_bestseller') ? true : false,
+            'category_id' => $request->category_id,
+        ];
+        
+        if ($request->hasFile('cover_image')) {
+            if ($book->cover_image) {
+                Storage::disk('public')->delete($book->cover_image);
+            }
+            
+            $imagePath = $request->file('cover_image')->store('covers', 'public');
+            $data['cover_image'] = $imagePath;
+        }
+        
+        $book->update($data);
+        
+        return redirect()->route('admin.books.index')->with('success', 'Cập nhật sách thành công');
+    }
+    
+    public function destroy(Book $book)
+    {
+        if ($book->cover_image) {
+            Storage::disk('public')->delete($book->cover_image);
+        }
+        
+        $book->delete();
+        
+        return redirect()->route('admin.books.index')->with('success', 'Xóa sách thành công');
+    }
+}
 
 
 
