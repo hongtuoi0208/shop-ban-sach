@@ -198,22 +198,15 @@ classDiagram
 # Giới thiệu về dự án:
  Website bán đồ chơi online giúp người dùng có thể xem, tìm kiếm, đặt mua các sản phẩm như mô hình, búp bê, lego,.....Người quản lý  có thể thêm/sửa/xóa sản phẩm, quản lý đơn hàng và danh mục đồ chơi. Laravel được sử dụng để tổ chức cấu trúc MVC rõ ràng, tích hợp các chức năng như xác thực người dùng, giỏ hàng, và thanh toán.
 
+# Sơ đồ lớp (Class Diagram)
 
+![deepseek_mermaid_20250625_34294a](https://github.com/user-attachments/assets/46473358-3fcf-4f44-832a-53fa912cdcf2)
 
+# Activity Diagram
 
+![deepseek_mermaid_20250625_34294a](https://github.com/user-attachments/assets/18fa2c2f-c944-4199-9b2e-d637838d487e)
 
-
-
-
-
-
-
-
-
-
-
-
-
+# Database
 
 
 
