@@ -1,4 +1,4 @@
-![184755435-bb97a62a-4cdd-408d-9a5a-526430f50c64](https://github.com/user-attachments/assets/fff39a10-bc56-4c9e-9d34-a77704503633)# Sinh viên thực hiện
+# Sinh viên thực hiện
 - **Họ và tên :** Bùi Thị Hồng Tươi
 - **Mã số sinh viên :** 23015124
 - **Lớp:** Thiết kế web nâng cao-1-3-24(TH3)
@@ -28,7 +28,11 @@ js: Chứa các tệp JavaScript để thêm tính năng tương tác.
 uploaded_img: Chứa các hình ảnh sản phẩm được tải lên.
 Các tệp PHP
 
-## Dữ liệu mẫu
+# Cơ sở dữ liệu
+
+![184755435-bb97a62a-4cdd-408d-9a5a-526430f50c64](https://github.com/user-attachments/assets/fff39a10-bc56-4c9e-9d34-a77704503633)
+
+# Dữ liệu mẫu
 
 | Bảng             | Số lượng record mẫu |
 | ---------------- | ------------------- |
