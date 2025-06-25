@@ -40,10 +40,6 @@ Các tệp PHP
 # Cơ sở dữ liệu
 
 ![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12) 
-
-## Sơ đồ thuật toán
-
-![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
  
 ## Sơ đồ chức năng (Use case diagram)
 ![deepseek_mermaid_20250625_4990d2](https://github.com/user-attachments/assets/659d0057-974b-4137-9182-bec7d90bb13d)
@@ -68,7 +64,6 @@ B --> C[Hiện hộp thoại xác nhận]
 C -->|Đồng ý| D[Xóa sách khỏi CSDL]
 D --> E[Reload danh sách sách]
 C -->|Hủy| F[Không làm gì cả]
-
 
 
 ```
@@ -130,6 +125,9 @@ classDiagram
     Order "*" --> "*" Book : contains
 ```
 
+## Sơ đồ thuật toán
+
+![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
 
 
 
