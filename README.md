@@ -7,13 +7,6 @@
 </ul>
 <p>I'm from PHENIKAA UNIVERSITY</p>
 
-# Shop-Ban-Sach-Laravel
-
-# Sinh viên thực hiện
-- **Họ và tên :** Bùi Thị Hồng Tươi
-- **Mã số sinh viên :** 23015124
-- **Lớp:** Thiết kế web nâng cao-1-3-24(TH3)
-
 # Tên dự án : Shop bán sách
 
 # Mô tả dự án
