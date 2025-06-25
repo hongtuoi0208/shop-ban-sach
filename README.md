@@ -59,5 +59,8 @@ Các tệp PHP
 
 ![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12)
 
+# Database Diagram
+![68747470733a2f2f692e696d6775722e636f6d2f35326f513479782e6a7067](https://github.com/user-attachments/assets/0c82b505-389a-4d01-b2b7-ced86e824a65)
+
 
 
