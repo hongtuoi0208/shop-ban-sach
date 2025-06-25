@@ -41,21 +41,6 @@ Các tệp PHP
 
 ![184755435-bb97a62a-4cdd-408d-9a5a-526430f50c64](https://github.com/user-attachments/assets/fff39a10-bc56-4c9e-9d34-a77704503633)
 
-# Dữ liệu mẫu
-
-| Bảng             | Số lượng record mẫu |
-| ---------------- | ------------------- |
-| user             | 5                   |
-| product          | 100                 |
-| product_review   | 150                 |
-| category         | 15                  |
-| product_category | 100                 |
-| cart             | 2                   |
-| cart_item        | 5                   |
-| orders           | 25                  |
-| order_item       | 60                  |
-| wishlist_item    | 30                  |
-
 # Sơ đồ liên quan
 
 ![use-cases](https://github.com/user-attachments/assets/7f115c60-f294-479f-b130-1301c48d37f4)
@@ -156,6 +141,8 @@ classDiagram
 
 ![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
  
+## Sơ đồ chức năng (Use case diagram)
+![deepseek_mermaid_20250625_4990d2](https://github.com/user-attachments/assets/659d0057-974b-4137-9182-bec7d90bb13d)
 
 
 
@@ -212,6 +199,7 @@ classDiagram
 # Sơ đồ thuật toán
 ![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/3f2edb23-a91d-4122-b1c3-a740e768fa23)
 
+# Sơ đồ chức năng (Use case Diagram)
 
 
 
