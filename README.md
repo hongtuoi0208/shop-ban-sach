@@ -64,3 +64,73 @@ Các tệp PHP
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Họ và tên: Đinh Nhật Tân
+# Mã số sinh viên : 23013018
+# Lớp: Thiết kế web nâng cao-1-3-24-TH4
+
+# Tên dự án : Shop đồ chơi
+
+# Giới thiệu về dự án:
+ Website bán đồ chơi online giúp người dùng có thể xem, tìm kiếm, đặt mua các sản phẩm như mô hình, búp bê, lego,.....Người quản lý  có thể thêm/sửa/xóa sản phẩm, quản lý đơn hàng và danh mục đồ chơi.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
