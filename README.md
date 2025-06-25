@@ -131,7 +131,7 @@ classDiagram
 
 ## Link Readme (.io)
 
-https://hongtuoi0208.github.io/shop-ban-sach/
+
 
 ## Link Repo
 
