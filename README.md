@@ -11,7 +11,7 @@
 
 # Mô tả dự án
     -Là một trang web bán sách trực tuyến được xây dựng bằng Laravel.
-    -Người dùng có thể đăng ký, đăng nhập, xem danh sách sách, tìm kiếm, thêm vào giỏ hàng và        đặt hàng.
+    -Người dùng có thể đăng ký, đăng nhập, xem danh sách sách, tìm kiếm, thêm vào giỏ hàng và   đặt hàng.
     -Quản trị viên (Admin) có thể quản lý sách, danh mục, người dùng và đơn hàng.
     -Hệthống sử dụng các models chính như: User, Book, Cart, Order, Review, Category.
     -Hướng tới thiết kế MVC rõ ràng, dễ mở rộng trong tương lai.
