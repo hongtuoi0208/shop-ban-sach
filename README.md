@@ -264,6 +264,8 @@ class UserFactory extends Factory
     }
 }
 
+-**controler**: 
+
 
 
 
