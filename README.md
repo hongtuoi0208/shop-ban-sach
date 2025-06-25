@@ -57,4 +57,7 @@ Các tệp PHP
 
 # Sơ đồ lớp UML
 
-![002cfd59-f8e5-4e8b-abdb-b1af9a4bfd97](https://github.com/user-attachments/assets/df34a8ba-2066-41ad-bc89-b1fd8fd4b196)
+![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12)
+
+
+
