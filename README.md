@@ -37,24 +37,20 @@ js: Chứa các tệp JavaScript để thêm tính năng tương tác.
 uploaded_img: Chứa các hình ảnh sản phẩm được tải lên.
 Các tệp PHP
 
-# Cơ sở dữ liệu
-
-![184755435-bb97a62a-4cdd-408d-9a5a-526430f50c64](https://github.com/user-attachments/assets/fff39a10-bc56-4c9e-9d34-a77704503633)
-
-# Sơ đồ liên quan
-
-![use-cases](https://github.com/user-attachments/assets/7f115c60-f294-479f-b130-1301c48d37f4)
-
 # Sơ đồ class diagram
 
 ![class-diagram](https://github.com/user-attachments/assets/2ad9fc27-e928-4fbf-ad64-e7a2e54d8a04)
 
-# Sơ đồ UML
+# Cơ sở dữ liệu
 
-![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12)
+![Screenshot 2025-06-25 150746](https://github.com/user-attachments/assets/369a4323-5f1c-40da-8732-81d71fe58a12) 
 
-# Database Diagram
-![68747470733a2f2f692e696d6775722e636f6d2f35326f513479782e6a7067](https://github.com/user-attachments/assets/0c82b505-389a-4d01-b2b7-ced86e824a65)
+## Sơ đồ thuật toán
+
+![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
+ 
+## Sơ đồ chức năng (Use case diagram)
+![deepseek_mermaid_20250625_4990d2](https://github.com/user-attachments/assets/659d0057-974b-4137-9182-bec7d90bb13d)
 
 ## Activity Diagram (Ví dụ: Đặt hàng - Place Order)
 ```mermaid
@@ -137,12 +133,6 @@ classDiagram
     Book "*" --> "1" Category
     Order "*" --> "*" Book : contains
 ```
-## Sơ đồ thuật toán
-
-![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
- 
-## Sơ đồ chức năng (Use case diagram)
-![deepseek_mermaid_20250625_4990d2](https://github.com/user-attachments/assets/659d0057-974b-4137-9182-bec7d90bb13d)
 
 
 
