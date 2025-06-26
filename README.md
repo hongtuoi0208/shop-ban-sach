@@ -129,17 +129,29 @@ classDiagram
 
 ![deepseek_mermaid_20250625_694871](https://github.com/user-attachments/assets/89409eb6-dcd6-45f7-b76b-89b5c3566dbb)
 
+# Giao diện chính của web
+![Ảnh chụp màn hình 2025-06-26 094204](https://github.com/user-attachments/assets/6daee696-d2ef-4e60-9ea5-b758b55d977c)
+
+# Giao diện admin 
+![Ảnh chụp màn hình 2025-06-26 094620](https://github.com/user-attachments/assets/161cb27f-3c23-48ff-8055-002b07a2af5d)
+
+# Giao diện danh mục sách, tìm kiếm
+![image](https://github.com/user-attachments/assets/536fb0c4-3bb7-4c9f-9e5a-d58c2452e875)
+
+# Giao diện thanh toán
+![image](https://github.com/user-attachments/assets/fbe5c9f1-0ce4-4f53-8ebe-f57ea072ede5)
+
+
 # Link Readme (.io)
-
-
 
 # Link Repo
 
 https://github.com/hongtuoi0208/shop-ban-sach
 
-# Module
 
-<a href = '' ><li>Auth.Book.Controller </li></a>
+## Model
+
+<a href = '' ><li>Code Auth.Book.Controller </li></a>
 
 <?php
 
@@ -228,7 +240,7 @@ class BooksController extends Controller
     }
 }
 
-<a href = '' ><li> Controllers (Admin.BookController.php) </li></a>
+<a href = '' ><li> Code Admin.BookController </li></a>
 
 return view('admin.pages.books.edit', compact('book', 'categories'));
     }
@@ -297,62 +309,85 @@ return view('admin.pages.books.edit', compact('book', 'categories'));
 }
 
 
-<a href = '' ><li> Database (Migrations) </li></a>
+<a href = '' ><li> Code Model user </li></a>
 
- <?php
+<?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+namespace App\Models;
 
-return new class extends Migration
+// use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Notifications\Notifiable;
+
+class User extends Authenticatable
 {
+    /** @use HasFactory<\Database\Factories\UserFactory> */
+    use HasFactory, Notifiable;
+
     /**
-     * Run the migrations.
+     * The attributes that are mass assignable.
+     *
+     * @var list<string>
      */
-    public function up(): void
+    protected $fillable = [
+        'name',
+        'avatar',
+        'email',
+        'role',
+        'password',
+    ];
+
+    // Check if user is admin
+    public function isAdmin()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('avatar')->nullable();
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->timestamps();
-        });
+        return $this->role === 'admin';
+    }
 
-        Schema::create('password_reset_tokens', function (Blueprint $table) {
-            $table->string('email')->primary();
-            $table->string('token');
-            $table->timestamp('created_at')->nullable();
-        });
+    // Relationships
+    public function favorites()
+    {
+        return $this->belongsToMany(Book::class, 'favorites');
+    }
 
-        Schema::create('sessions', function (Blueprint $table) {
-            $table->string('id')->primary();
-            $table->foreignId('user_id')->nullable()->index();
-            $table->string('ip_address', 45)->nullable();
-            $table->text('user_agent')->nullable();
-            $table->longText('payload');
-            $table->integer('last_activity')->index();
-        });
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
+    }
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
+
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
     }
 
     /**
-     * Reverse the migrations.
+     * The attributes that should be hidden for serialization.
+     *
+     * @var list<string>
      */
-    public function down(): void
+    protected $hidden = [
+        'password',
+        'remember_token',
+    ];
+
+    /**
+     * Get the attributes that should be cast.
+     *
+     * @return array<string, string>
+     */
+    protected function casts(): array
     {
-        Schema::dropIfExists('users');
-        Schema::dropIfExists('password_reset_tokens');
-        Schema::dropIfExists('sessions');
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
     }
- }
-
-
-
-
+}
 
 
 
