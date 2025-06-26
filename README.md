@@ -135,7 +135,7 @@ classDiagram
 # Giao diện admin 
 ![Ảnh chụp màn hình 2025-06-26 094620](https://github.com/user-attachments/assets/161cb27f-3c23-48ff-8055-002b07a2af5d)
 
-# Giao diện danh mục sách, tìm kiếm
+# Giao diện danh mục sách, tìm kiếm, top bán chạy
 ![image](https://github.com/user-attachments/assets/536fb0c4-3bb7-4c9f-9e5a-d58c2452e875)
 
 # Giao diện thanh toán
